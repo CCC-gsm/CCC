@@ -69,3 +69,34 @@ a {
 #label-container {
   color: white;
 }
+
+@keyframes right {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes left {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+}
+
+* {
+  color: white;
+}
+
+.hand {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom left 60px;
+}
