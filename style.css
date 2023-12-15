@@ -100,3 +100,14 @@ a {
   transition: transform 0.3s ease-in-out;
   transform-origin: bottom left 60px;
 }
+
+.startButton {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  border-radius: 20px;
+  border: none;
+
+  font-size: 20px;
+  color: #000;
+}
