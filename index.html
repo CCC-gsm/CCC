@@ -85,7 +85,6 @@
 
     <div id="webcam-container"></div>
     <div id="label-container"></div>
-    <button onclick="chamChamChamMotion()">test</button>
     <button class="startButton" id="start">시작하기</button>
 
     <img class="hand" src="./hand.png" />
@@ -141,6 +140,8 @@
 
       const hand = document.querySelector(".hand");
 
+      let vector = "";
+
       function chamChamChamMotion() {
         hand.style.transform = `translateY(${-1 * 50}px)`;
 
@@ -158,9 +159,12 @@
           1500
         );
 
-        const rand = Math.floor(Math.random() * 10);
+        // const rand = Math.floor(Math.random() * 10);
+      }
 
-        setTimeout(rand > 5 ? left : right, 2000);
+      function test() {
+        const func = vector === "left" ? right : left;
+        func();
       }
 
       function left() {
@@ -175,22 +179,16 @@
         setTimeout(() => (hand.style.animation = ""), 1200);
       }
 
-      clickStartButton.addEventListener("click", () =>
-        setTimeout(
-          () =>
-            console.log(
-              // Math.max(
-              //   Number(rright.innerHTML.slice(7)),
-              //   Number(lleft.innerHTML.slice(6))
-              // )
-              Number(rright.innerHTML.slice(7)) >
-                Number(lleft.innerHTML.slice(6))
-                ? "right"
-                : "left"
-            ),
-          3000
-        )
-      );
+      clickStartButton.addEventListener("click", () => {
+        chamChamChamMotion();
+        setTimeout(() => {
+          vector =
+            Number(rright.innerHTML.slice(7)) > Number(lleft.innerHTML.slice(6))
+              ? "right"
+              : "left";
+        }, 1800);
+        setTimeout(test, 2000);
+      });
     </script>
   </body>
 </html>

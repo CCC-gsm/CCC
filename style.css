@@ -60,6 +60,7 @@ a {
   padding-left: 20px;
   gap: 30px;
   align-items: center;
+  cursor: pointer;
 }
 
 .icon path {
