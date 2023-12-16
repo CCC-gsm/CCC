@@ -112,3 +112,7 @@ a {
   font-size: 20px;
   color: #000;
 }
+
+#label-container div {
+  color: #000;
+}
