@@ -168,11 +168,13 @@
       }
 
       function left() {
+        hand.style.transformOrigin = `bottom left 60px`;
         hand.style.animation = `left 1s`;
         setTimeout(() => (hand.style.animation = ""), 1200);
       }
 
       function right() {
+        hand.style.transformOrigin = `bottom right 60px`;
         hand.style.animation = `right 1s`;
         setTimeout(() => (hand.style.animation = ""), 1200);
       }
