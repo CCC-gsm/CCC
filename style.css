@@ -22,7 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  color: #ededed;
   font-weight: 700;
   font-size: 15px;
 }
@@ -61,37 +61,38 @@ a {
   gap: 30px;
   align-items: center;
   cursor: pointer;
+  color: #000;
 }
 
 .icon path {
-  fill: white;
+  fill: #ededed;
 }
 
 #label-container {
-  color: white;
+  color: #ededed;
 }
 
 @keyframes right {
   0%,
   100% {
-    transform: rotate(0);
+    transform: rotateZ(0deg);
   }
   50% {
-    transform: rotate(90deg);
+    transform: rotateZ(70deg);
   }
 }
 @keyframes left {
   0%,
   100% {
-    transform: rotate(0);
+    transform: rotateZ(0deg);
   }
   50% {
-    transform: rotate(-90deg);
+    transform: rotateZ(-70deg);
   }
 }
 
 * {
-  color: white;
+  color: #ededed;
 }
 
 .hand {
@@ -100,17 +101,18 @@ a {
   width: 300px;
   transition: transform 0.3s ease-in-out;
   transform-origin: bottom left 60px;
+  transform-style: preserve-3d;
 }
 
 .startButton {
-  width: 200px;
-  height: 100px;
-  background-color: white;
-  border-radius: 20px;
+  width: 128px;
+  height: 40px;
+  border-radius: 6px;
   border: none;
 
-  font-size: 20px;
+  font-size: 16px;
   color: #000;
+  background: #ededed;
 }
 
 #label-container div {
