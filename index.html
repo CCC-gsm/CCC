@@ -63,6 +63,13 @@
       <h1 class="title">
         "참PD"로 감정을 배제한 완벽한 참참참 게임을 즐겨보세요!
       </h1>
+      <select class="select">
+        <option value="1">이정우</option>
+        <option value="2">최장우</option>
+        <option value="3">하제우</option>
+        <option value="4">정찬교</option>
+        <option value="5">이승제</option>
+      </select>
       <button class="startBTN" type="button" onclick="init()">
         Start
         <svg
@@ -87,11 +94,18 @@
     <div id="label-container"></div>
     <button class="startButton" id="start">시작하기</button>
 
-    <img class="hand" src="./face.png" />
+    <img class="hand" src="./1.png" />
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
       const URL = "https://teachablemachine.withgoogle.com/models/D5JfwDtdW/";
+
+      const select = document.querySelector(".select");
+      const image = document.querySelector(".hand");
+
+      select.addEventListener("change", (e) => {
+        image.src = `./${e.target.value}.png`;
+      });
 
       let model, webcam, labelContainer, maxPredictions;
       const clickStartButton = document.getElementById("start");

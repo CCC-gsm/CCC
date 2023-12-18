@@ -118,3 +118,13 @@ a {
 #label-container div {
   color: #000;
 }
+
+.select {
+  width: 128px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  color: #000;
+  background: #ededed;
+}
