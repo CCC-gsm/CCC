@@ -162,9 +162,18 @@
         // const rand = Math.floor(Math.random() * 10);
       }
 
+      const title = document.querySelector(".title");
+
       function onChamChamCahm() {
         const func = vector === "left" ? right : left;
         func();
+        title.innerText = "그걸 틀리시네요 ㅋㅋ";
+        setTimeout(
+          () =>
+            (title.innerText =
+              "참PD로 감정을 배제한 완벽한 참참참 게임을 즐겨보세요!"),
+          2000
+        );
       }
 
       function left() {
